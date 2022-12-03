@@ -1,0 +1,31 @@
+{
+  "name": "Indonesia Berkurban",
+  "description": "Fullstack app integrated with IoT for managing meat distribution and quality check during Eid al-Adha",
+  "date": "2021-09",
+  "stack": [
+    "Express",
+    "Prisma",
+    "React",
+    "Tailwind CSS",
+    "Arduino",
+    "Node-RED"
+  ],
+  "images": [
+    {
+      "name": "Web detail page",
+      "url": "web-detail.jpeg"
+    },
+    {
+      "name": "Local info page",
+      "url": "local.jpeg"
+    },
+    {
+      "name": "Admin detail page",
+      "url": "admin.jpeg"
+    },
+    {
+      "name": "Web home page",
+      "url": "web-home.jpeg"
+    }
+  ]
+}

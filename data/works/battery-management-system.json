@@ -1,0 +1,12 @@
+{
+  "name": "Battery Management System",
+  "description": "IoT human-machine interface to display battery and cell status",
+  "date": "2022-02",
+  "stack": ["React", "Tailwind CSS"],
+  "images": [
+    {
+      "name": "Full page",
+      "url": "full.png"
+    }
+  ]
+}

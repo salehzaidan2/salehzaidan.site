@@ -1,0 +1,20 @@
+{
+  "name": "Sekolah Skullers",
+  "description": "Gamification website for HMFT-ITB student orientation event",
+  "date": "2021-08",
+  "stack": ["Django", "React", "Next.js", "CSS Modules"],
+  "images": [
+    {
+      "name": "Home page",
+      "url": "home.jpeg"
+    },
+    {
+      "name": "Batch profile page",
+      "url": "angkatan.jpeg"
+    },
+    {
+      "name": "Class list page",
+      "url": "kelas.jpeg"
+    }
+  ]
+}
