@@ -39,7 +39,10 @@ export function WorkCard({
         </p>
       </div>
       {/* TODO: Add work detail page link */}
-      <Link href="#" className="after:absolute after:inset-0"></Link>
+      <Link
+        href={`/works/${slug}`}
+        className="after:absolute after:inset-0"
+      ></Link>
     </article>
   );
 }
