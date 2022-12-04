@@ -1,5 +1,7 @@
 import type { GetStaticPropsContext, InferGetStaticPropsType } from "next";
+import Head from "next/head";
 import Image from "next/image";
+import personal from "../../data/personal.json";
 import { getWorkData, getWorksSlug } from "../../lib/fetch";
 
 export function getStaticPaths() {
@@ -31,6 +33,7 @@ export function getStaticProps(ctx: GetStaticPropsContext<{ slug: string }>) {
 export default function WorkDetail({
   work,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const pageTitle = `${work.name} \u2013 ${personal.name.first} ${personal.name.last}`;
   const formattedDate = new Date(work.date).toLocaleDateString("en", {
     year: "numeric",
     month: "long",
@@ -38,6 +41,11 @@ export default function WorkDetail({
 
   return (
     <div className="space-y-8">
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={work.description} />
+      </Head>
+
       <section className="space-y-4 pt-4">
         <h1 className="text-2xl font-medium sm:text-3xl">{work.name}</h1>
         <div className="space-y-2">
