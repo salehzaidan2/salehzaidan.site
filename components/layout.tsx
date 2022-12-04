@@ -24,7 +24,6 @@ export function Layout({ children }: LayoutProps) {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={personal.tagline} />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
