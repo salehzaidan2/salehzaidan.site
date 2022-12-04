@@ -38,9 +38,9 @@ export function WorkCard({
           {description}
         </p>
       </div>
-      {/* TODO: Add work detail page link */}
       <Link
         href={`/works/${slug}`}
+        aria-label={name}
         className="after:absolute after:inset-0"
       ></Link>
     </article>
