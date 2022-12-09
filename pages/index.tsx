@@ -67,7 +67,7 @@ export default function Home({
         <div className="flex justify-center pt-4">
           <Link
             href="/works"
-            className="rounded bg-stone-800 px-3 py-1.5 hover:bg-stone-700"
+            className="rounded bg-stone-200 px-3 py-1.5 hover:bg-stone-300 dark:bg-stone-800 dark:hover:bg-stone-700"
           >
             View more
           </Link>

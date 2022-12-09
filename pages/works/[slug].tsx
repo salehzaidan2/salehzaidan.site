@@ -58,7 +58,7 @@ export default function WorkDetail({
               {work.stack.map((item) => (
                 <li
                   key={item}
-                  className="whitespace-nowrap rounded bg-stone-800 px-2 py-0.5 text-sm"
+                  className="whitespace-nowrap rounded bg-stone-200 px-2 py-0.5 text-sm dark:bg-stone-800"
                 >
                   {item}
                 </li>

@@ -8,13 +8,13 @@ const externalNavLinks = [
 
 export function Footer() {
   return (
-    <footer className="space-y-4 pt-12 pb-4 text-stone-400">
+    <footer className="space-y-4 pt-12 pb-4 text-stone-500 dark:text-stone-400">
       <nav className="flex justify-center gap-4">
         {externalNavLinks.map((link) => (
           <a
             key={link.name}
             href={link.url}
-            className="rounded px-2 py-0.5 hover:bg-stone-800 hover:text-white"
+            className="rounded px-2 py-0.5 hover:bg-stone-200 hover:text-stone-900 dark:hover:bg-stone-800 dark:hover:text-white"
           >
             {link.name}
           </a>

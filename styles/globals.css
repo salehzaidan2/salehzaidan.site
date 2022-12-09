@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-y-scroll bg-stone-900 text-white scrollbar scrollbar-track-stone-800 scrollbar-thumb-stone-700 hover:scrollbar-thumb-stone-600;
+  @apply overflow-y-scroll bg-stone-100 text-stone-900 scrollbar scrollbar-track-stone-200 scrollbar-thumb-stone-300 hover:scrollbar-thumb-stone-400 dark:bg-stone-900 dark:text-white dark:scrollbar-track-stone-800 dark:scrollbar-thumb-stone-700 dark:hover:scrollbar-thumb-stone-600;
 }
