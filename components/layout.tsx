@@ -7,9 +7,9 @@ import { Header } from "./header";
 
 const rubik = Rubik({ subsets: ["latin"], display: "swap" });
 
-interface LayoutProps {
+type LayoutProps = {
   children: React.ReactNode;
-}
+};
 
 export function Layout({ children }: LayoutProps) {
   const pageTitle = `${personal.name.first} ${personal.name.last} \u2013 ${personal.tagline}`;
