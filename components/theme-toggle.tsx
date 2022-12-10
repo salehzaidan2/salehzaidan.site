@@ -1,43 +1,7 @@
-import { useEffect, useState } from "react";
-
-const THEME_KEY = "sz-theme";
-
-const THEME = {
-  dark: "dark",
-  light: "light",
-} as const;
+import { THEME, useTheme } from "../lib/theme";
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<typeof THEME[keyof typeof THEME]>(() =>
-    localStorage[THEME_KEY] === THEME.dark ||
-    (!(THEME_KEY in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ? THEME.dark
-      : THEME.light
-  );
-
-  useEffect(() => {
-    if (theme === THEME.dark) {
-      document.documentElement.classList.add(THEME.dark);
-      localStorage[THEME_KEY] = THEME.dark;
-    } else {
-      document.documentElement.classList.remove(THEME.dark);
-      localStorage[THEME_KEY] = THEME.light;
-    }
-
-    let metaThemeColor = document.head.querySelector(
-      'meta[name="theme-color"]'
-    );
-    if (!metaThemeColor) {
-      metaThemeColor = document.createElement("meta");
-      metaThemeColor.setAttribute("name", "theme-color");
-      document.head.prepend(metaThemeColor);
-    }
-    metaThemeColor.setAttribute(
-      "content",
-      theme === THEME.dark ? "#1c1917" : "#f5f5f4"
-    );
-  }, [theme]);
+  const { theme, setTheme } = useTheme();
 
   return (
     <button
