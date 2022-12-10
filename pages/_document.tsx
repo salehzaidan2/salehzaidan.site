@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from "next/document";
-import Script from "next/script";
 
 export default function Document() {
   return (
@@ -24,9 +23,10 @@ export default function Document() {
           type="image/png"
         />
         <meta content="#FFFFFF" name="theme-color" />
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script src="/init-theme.js"></script>
       </Head>
       <body>
-        <Script src="/init-theme.js" strategy="beforeInteractive" />
         <Main />
         <NextScript />
       </body>
