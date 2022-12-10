@@ -2,39 +2,52 @@ import { useEffect, useState } from "react";
 
 const THEME_KEY = "sz-theme";
 
-const Theme = {
-  Dark: "dark",
-  Light: "light",
+const THEME = {
+  dark: "dark",
+  light: "light",
 } as const;
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<typeof Theme[keyof typeof Theme]>(() =>
-    localStorage[THEME_KEY] === Theme.Dark ||
+  const [theme, setTheme] = useState<typeof THEME[keyof typeof THEME]>(() =>
+    localStorage[THEME_KEY] === THEME.dark ||
     (!(THEME_KEY in localStorage) &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ? Theme.Dark
-      : Theme.Light
+      ? THEME.dark
+      : THEME.light
   );
 
   useEffect(() => {
-    if (theme === Theme.Dark) {
-      document.documentElement.classList.add(Theme.Dark);
-      localStorage[THEME_KEY] = Theme.Dark;
+    if (theme === THEME.dark) {
+      document.documentElement.classList.add(THEME.dark);
+      localStorage[THEME_KEY] = THEME.dark;
     } else {
-      document.documentElement.classList.remove(Theme.Dark);
-      localStorage[THEME_KEY] = Theme.Light;
+      document.documentElement.classList.remove(THEME.dark);
+      localStorage[THEME_KEY] = THEME.light;
     }
+
+    let metaThemeColor = document.head.querySelector(
+      'meta[name="theme-color"]'
+    );
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement("meta");
+      metaThemeColor.setAttribute("name", "theme-color");
+      document.head.prepend(metaThemeColor);
+    }
+    metaThemeColor.setAttribute(
+      "content",
+      theme === THEME.dark ? "#1c1917" : "#f5f5f4"
+    );
   }, [theme]);
 
   return (
     <button
       aria-label="Theme toggle"
       onClick={() =>
-        setTheme((prev) => (prev === Theme.Dark ? Theme.Light : Theme.Dark))
+        setTheme((prev) => (prev === THEME.dark ? THEME.light : THEME.dark))
       }
       className="rounded-md bg-stone-200 p-1.5 hover:bg-stone-300 dark:bg-stone-800 dark:hover:bg-stone-700"
     >
-      {theme === Theme.Dark ? (
+      {theme === THEME.dark ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

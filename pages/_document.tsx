@@ -22,7 +22,6 @@ export default function Document() {
           sizes="32x32"
           type="image/png"
         />
-        <meta content="#FFFFFF" name="theme-color" />
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script src="/init-theme.js"></script>
       </Head>
