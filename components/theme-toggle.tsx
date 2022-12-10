@@ -2,31 +2,38 @@ import { useEffect, useState } from "react";
 
 const THEME_KEY = "sz-theme";
 
+const Theme = {
+  Dark: "dark",
+  Light: "light",
+} as const;
+
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<"dark" | "light">(() =>
-    localStorage[THEME_KEY] === "dark" ||
+  const [theme, setTheme] = useState<typeof Theme[keyof typeof Theme]>(() =>
+    localStorage[THEME_KEY] === Theme.Dark ||
     (!(THEME_KEY in localStorage) &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ? "dark"
-      : "light"
+      ? Theme.Dark
+      : Theme.Light
   );
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-      localStorage[THEME_KEY] = "dark";
+    if (theme === Theme.Dark) {
+      document.documentElement.classList.add(Theme.Dark);
+      localStorage[THEME_KEY] = Theme.Dark;
     } else {
-      document.documentElement.classList.remove("dark");
-      localStorage[THEME_KEY] = "light";
+      document.documentElement.classList.remove(Theme.Dark);
+      localStorage[THEME_KEY] = Theme.Light;
     }
   }, [theme]);
 
   return (
     <button
-      onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
+      onClick={() =>
+        setTheme((prev) => (prev === Theme.Dark ? Theme.Light : Theme.Dark))
+      }
       className="rounded-md bg-stone-200 p-1.5 hover:bg-stone-300 dark:bg-stone-800 dark:hover:bg-stone-700"
     >
-      {theme === "dark" ? (
+      {theme === Theme.Dark ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

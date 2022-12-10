@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -25,6 +26,7 @@ export default function Document() {
         <meta content="#FFFFFF" name="theme-color" />
       </Head>
       <body>
+        <Script src="/init-theme.js" strategy="beforeInteractive" />
         <Main />
         <NextScript />
       </body>
