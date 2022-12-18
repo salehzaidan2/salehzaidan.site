@@ -31,7 +31,7 @@ export function WorkCard({
           />
         </div>
         <div className="cursor-pointer rounded-b-md text-center transition-opacity duration-300 group-hover:opacity-100 sm:absolute sm:bottom-0 sm:bg-black/75 sm:px-4 sm:py-2 sm:text-white sm:opacity-0">
-          <h3 className="text-lg font-medium">{name}</h3>
+          <h3 className="text-lg font-medium leading-tight">{name}</h3>
           <p
             className="overflow-hidden text-sm leading-tight"
             style={{
