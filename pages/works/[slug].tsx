@@ -70,12 +70,16 @@ export default function WorkDetail({
 
       <section className="space-y-8">
         {work.images.map((image) => (
-          <div key={image.url} className="relative aspect-video shadow-xl">
+          <div key={image.url}>
+            <h2 className="rounded-t-md bg-stone-200 py-1 px-2 text-sm dark:bg-stone-800">
+              {image.name}
+            </h2>
             <Image
               src={`/static/images/${work.slug}/${image.url}`}
               alt={image.name}
-              fill
-              className="object-cover object-top"
+              width={608}
+              height={608}
+              className="shadow-xl"
             />
           </div>
         ))}
