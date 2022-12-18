@@ -27,7 +27,7 @@ export function WorkCard({
             src={`/static/images/${slug}/${thumbnail.url}`}
             alt={thumbnail.name}
             fill
-            className="rounded-md object-cover object-top shadow-md"
+            className="rounded-md object-cover object-left-top shadow-md"
           />
         </div>
         <div className="cursor-pointer rounded-b-md text-center transition-opacity duration-300 group-hover:opacity-100 sm:absolute sm:bottom-0 sm:bg-black/75 sm:px-4 sm:py-2 sm:text-white sm:opacity-0">
