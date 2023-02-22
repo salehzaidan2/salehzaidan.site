@@ -1,6 +1,9 @@
 {
   "name": "Indonesia Berkurban",
-  "description": "Fullstack app integrated with IoT for managing meat distribution and quality check during Eid al-Adha",
+  "description": {
+    "en": "Fullstack app integrated with IoT for managing meat distribution and quality check during Eid al-Adha",
+    "id": "Aplikasi fullstack terintegrasi dengan IoT untuk mengelola distribusi dan pemeriksaan kualtias daging selama Idul Adha"
+  },
   "date": "2021-09",
   "stack": [
     "Express",

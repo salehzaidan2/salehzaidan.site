@@ -1,21 +1,23 @@
 {
-    "name": "Stasiun Pengisian Kendaraan Listrik (SPKL)",
-    "description": "IoT human-machine interface to display electric vehicle charging data (time, total energy, cost, etc.)",
-    "date": "2022-03",
-    "stack": ["React", "Next.js", "Tailwind CSS"],
-    "images": [
-      {
-        "name": "Charging Station",
-        "url": "charging-station.png"
-      },
-      {
-        "name": "Daily Transaction",
-        "url": "daily-transaction.png"
-      },
-      {
-        "name": "Monthly Transaction",
-        "url": "monthly-transaction.png"
-      }
-    ]
-  }
-  
+  "name": "Stasiun Pengisian Kendaraan Listrik (SPKL)",
+  "description": {
+    "en": "IoT human-machine interface to display electric vehicle charging data (time, total energy, cost, etc.)",
+    "id": "Human-machine interface IoT untuk menampilkan data pengisian kendaraan listrik (waktu, total energi, biaya, dll.)"
+  },
+  "date": "2022-03",
+  "stack": ["React", "Next.js", "Tailwind CSS"],
+  "images": [
+    {
+      "name": "Charging Station",
+      "url": "charging-station.png"
+    },
+    {
+      "name": "Daily Transaction",
+      "url": "daily-transaction.png"
+    },
+    {
+      "name": "Monthly Transaction",
+      "url": "monthly-transaction.png"
+    }
+  ]
+}

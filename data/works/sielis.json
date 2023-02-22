@@ -1,6 +1,9 @@
 {
   "name": "Sistem Informasi Energi Listrik (SiElis)",
-  "description": "IoT human-machine interface to display electricity consumption for buildings in ITB",
+  "description": {
+    "en": "IoT human-machine interface to display electricity consumption for buildings in ITB",
+    "id": "Human-machine interface IoT untuk menampilkan konsumsi listrik gedung-gedung di ITB"
+  },
   "date": "2022-03",
   "stack": ["React", "Next.js", "Tailwind CSS"],
   "images": [

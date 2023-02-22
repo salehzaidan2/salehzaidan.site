@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import type { Work } from "../lib/types";
 
 type WorkCardProps = {
@@ -15,6 +16,10 @@ export function WorkCard({
   description,
   thumbnail,
 }: WorkCardProps) {
+  const router = useRouter();
+  const localeDescription =
+    description[router.locale ?? "en"] ?? description["en"];
+
   return (
     <article className="group relative w-[18.25rem]">
       <Link
@@ -40,7 +45,7 @@ export function WorkCard({
               WebkitBoxOrient: "vertical",
             }}
           >
-            {description}
+            {localeDescription}
           </p>
         </div>
       </Link>

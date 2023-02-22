@@ -1,6 +1,9 @@
 {
   "name": "Smart Building Automation",
-  "description": "Smart building system prototype that can adjust the brightness of indoor lights through web application",
+  "description": {
+    "en": "Smart building system prototype that can adjust the brightness of indoor lights through web application",
+    "id": "Prototipe sistem smart building yang dapat mengatur kecerahan lampu dalam ruangan melalui aplikasi web"
+  },
   "date": "2021-05",
   "stack": ["Express", "InfluxDB", "ESP32"],
   "images": [

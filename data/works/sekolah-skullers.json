@@ -1,6 +1,9 @@
 {
   "name": "Sekolah Skullers",
-  "description": "Gamification website for HMFT-ITB student orientation event",
+  "description": {
+    "en": "Gamification website for HMFT-ITB student orientation event",
+    "id": "Website gamifikasi untuk acara orientasi mahasiswa HMFT-ITB"
+  },
   "date": "2021-08",
   "stack": ["Django", "React", "Next.js", "CSS Modules"],
   "images": [

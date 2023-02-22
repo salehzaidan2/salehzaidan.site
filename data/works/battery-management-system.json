@@ -1,6 +1,9 @@
 {
   "name": "Battery Management System",
-  "description": "IoT human-machine interface to display battery and cell status",
+  "description": {
+    "en": "IoT human-machine interface to display battery and cell status",
+    "id": "Human-machine interface IoT untuk menampilkan status baterai dan sel"
+  },
   "date": "2022-02",
   "stack": ["React", "Tailwind CSS"],
   "images": [
