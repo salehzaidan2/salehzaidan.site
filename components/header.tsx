@@ -1,6 +1,7 @@
 import { useTranslation } from "next-i18next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { LangToggle } from "./lang-toggle";
 
 const ThemeToggle = dynamic(
   () => import("./theme-toggle").then((module) => module.ThemeToggle),
@@ -29,6 +30,9 @@ export function Header() {
       </nav>
       <div className="absolute inset-y-0 right-0 flex items-center">
         <ThemeToggle />
+      </div>
+      <div className="absolute inset-y-0 right-12 flex items-center">
+        <LangToggle />
       </div>
     </header>
   );
