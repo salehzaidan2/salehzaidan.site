@@ -1,6 +1,11 @@
 {
+  "tagline": "Penggemar IoT, AI, dan Web Dev",
   "links": {
     "home": "Beranda",
     "works": "Karya"
+  },
+  "404": {
+    "message": "Halaman tidak dapat ditemukan",
+    "back": "Kembali"
   }
 }

@@ -27,7 +27,7 @@ export default function Home({
           <h1 className="text-3xl font-medium sm:text-4xl">
             {t("home:greeting")}
           </h1>
-          <p className="text-lg sm:text-xl">{t("home:tagline")}</p>
+          <p className="text-lg sm:text-xl">{t("common:tagline")}</p>
         </div>
       </section>
 

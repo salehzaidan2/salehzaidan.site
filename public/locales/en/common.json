@@ -4,8 +4,13 @@
     "last": "Zaidan",
     "full": "$t(name.first) $t(name.last)"
   },
+  "tagline": "IoT, AI, and Web Dev enthusiast",
   "links": {
     "home": "Home",
     "works": "Works"
+  },
+  "404": {
+    "message": "Page could not be found",
+    "back": "Go back"
   }
 }

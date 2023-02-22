@@ -2,7 +2,6 @@ import { Rubik } from "@next/font/google";
 import cn from "classnames";
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
-import personal from "../data/personal.json";
 import { Footer } from "./footer";
 import { Header } from "./header";
 
@@ -14,7 +13,7 @@ type LayoutProps = {
 
 export function Layout({ children }: LayoutProps) {
   const { t } = useTranslation();
-  const pageTitle = `${t("name.full")} \u2013 ${personal.tagline}`;
+  const pageTitle = `${t("name.full")} \u2013 ${t("tagline")}`;
 
   return (
     <div
@@ -25,7 +24,7 @@ export function Layout({ children }: LayoutProps) {
     >
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content={personal.tagline} />
+        <meta name="description" content={t("tagline")} />
       </Head>
 
       <Header />

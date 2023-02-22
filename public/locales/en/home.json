@@ -1,6 +1,5 @@
 {
   "greeting": "Hi there! I'm $t(common:name.last)",
-  "tagline": "IoT, AI, and Web Dev enthusiast",
   "about": {
     "title": "About Me",
     "content": [
