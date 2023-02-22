@@ -1,0 +1,11 @@
+{
+  "name": {
+    "first": "Saleh",
+    "last": "Zaidan",
+    "full": "$t(name.first) $t(name.last)"
+  },
+  "links": {
+    "home": "Home",
+    "works": "Works"
+  }
+}

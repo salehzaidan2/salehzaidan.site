@@ -1,5 +1,6 @@
 import { Rubik } from "@next/font/google";
 import cn from "classnames";
+import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import personal from "../data/personal.json";
 import { Footer } from "./footer";
@@ -12,7 +13,8 @@ type LayoutProps = {
 };
 
 export function Layout({ children }: LayoutProps) {
-  const pageTitle = `${personal.name.first} ${personal.name.last} \u2013 ${personal.tagline}`;
+  const { t } = useTranslation();
+  const pageTitle = `${t("name.full")} \u2013 ${personal.tagline}`;
 
   return (
     <div

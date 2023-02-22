@@ -1,0 +1,15 @@
+{
+  "greeting": "Halo! Saya $t(common:name.last)",
+  "tagline": "Penggemar IoT, AI, dan Web Dev",
+  "about": {
+    "title": "Tentang Saya",
+    "content": [
+      "Saya seorang software engineer dengan minat besar pada Internet of Things, Artificial Intelligence, dan Website Development. Di waktu senggang, saya suka mempelajari hal-hal terbaru terkait teknologi digital dan melakukan beberapa proyek hobi yang terkait dengannya.",
+      "Saat ini saya bekerja sebagai IoT Application Engineer di perusahaan konsultan & layanan IT yang berspesialisasi di bidang Industri 4.0."
+    ]
+  },
+  "works": {
+    "title": "Karya Terbaru Saya",
+    "view-more": "Lihat lebih banyak"
+  }
+}

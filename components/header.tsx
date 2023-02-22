@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -6,12 +7,13 @@ const ThemeToggle = dynamic(
   { ssr: false }
 );
 
-const internalNavLinks = [
-  { name: "Home", url: "/" },
-  { name: "Works", url: "/works" },
-];
-
 export function Header() {
+  const { t } = useTranslation();
+  const internalNavLinks = [
+    { name: t("links.home"), url: "/" },
+    { name: t("links.works"), url: "/works" },
+  ];
+
   return (
     <header className="relative py-4">
       <nav className="flex justify-center gap-4">

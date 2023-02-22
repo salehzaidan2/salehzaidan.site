@@ -1,3 +1,5 @@
+import { useTranslation } from "next-i18next";
+
 const currentYear = new Date().getFullYear();
 
 const externalNavLinks = [
@@ -7,6 +9,8 @@ const externalNavLinks = [
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="space-y-4 pt-12 pb-4 text-stone-500 dark:text-stone-400">
       <nav className="flex justify-center gap-4">
@@ -21,7 +25,7 @@ export function Footer() {
         ))}
       </nav>
       <p className="text-center text-sm">
-        &copy; {currentYear} Saleh Zaidan. All rights reserved.
+        &copy; {currentYear} {t("name.full")}
       </p>
     </footer>
   );
