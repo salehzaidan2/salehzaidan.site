@@ -32,6 +32,7 @@ export function WorkCard({
             src={`/static/images/${slug}/${thumbnail.url}`}
             alt={thumbnail.name}
             fill
+            sizes="384px"
             className="rounded-md object-cover object-left-top shadow-md"
           />
         </div>
