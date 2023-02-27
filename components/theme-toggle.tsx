@@ -5,7 +5,7 @@ export function ThemeToggle() {
 
   return (
     <button
-      aria-label="Theme toggle"
+      aria-label={`Switch to ${theme === THEME.dark ? "light" : "dark"} mode`}
       onClick={() =>
         setTheme((prev) => (prev === THEME.dark ? THEME.light : THEME.dark))
       }
