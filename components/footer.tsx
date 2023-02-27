@@ -25,7 +25,7 @@ export function Footer() {
         ))}
       </nav>
       <p className="text-center text-sm">
-        &copy; {currentYear} {t("name.full")}
+        {`\u00a9 ${currentYear} ${t("name.full")}`}
       </p>
     </footer>
   );
